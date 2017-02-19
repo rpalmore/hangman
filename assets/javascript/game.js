@@ -43,7 +43,7 @@ console.log("this is the computerGuess: " + computerGuess)
 
 computerGuessLetters = computerGuess.split("");
 
-console.log(computerGuessLetters);
+console.log("here are computerGuessLetters " + computerGuessLetters);
 
 numberBlanks = (computerGuess.length);
 
@@ -53,8 +53,6 @@ console.log(numberBlanks);
 
 for (var i = 0; i < numberBlanks; i++) {
     blanksWins.push("_");
-
-// console.log(blanksWins);
 
 document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 }
@@ -83,16 +81,63 @@ console.log("this is my guess " + userGuess);
 
 // console.log(computerGuess[0]);
 
-function checkLetters () {
+// function checkLetters (letters) 
+
+// Suggestion from Ethan -- this is working!
+
+console.log(computerGuess.includes(userGuess));
 
 
+// Now let's try as if / then statement
+
+if (computerGuess.includes(userGuess)) {
+	alert("Yay!");
+}
+
+else {
+    alert("Wah wah ...");
+}
+
+// this bit of code is doing nothg
+    for (var i = 0; i < computerGuessLetters.length; i++);
+
+// but this is working
+//     if ((userGuess) == (computerGuess[0])) {
+// 	alert("Wow!!!");
+// }
+}
+
+
+
+// function allLetter(inputtxt) {
+
+// var letters = /^[A-Za-z]+$/;
+
+//    if(inputtxt.value.match(letters)) {
+
+//    alert("Yay!")
+// }
+
+//     else {
+//     	alert("Sorry!")
+//     }
+// }
+
+// function allLetter(inputtxt)
+//       { 
+//       var letters = /^[A-Za-z]+$/;
+//       if(inputtxt.value.match(letters))
+//       {
+//       alert('Your name have accepted : you can try another');
+//       return true;
+//       }
+//       else
+//       {
+//       alert('Please input alphabet characters only');
+//       return false;
+//       }
+//       }
 
 	// write function here //
-}
 
-if ((userGuess) == (computerGuess[0])) {
-	alert("Wow!!!");
-
-}
-}
 
