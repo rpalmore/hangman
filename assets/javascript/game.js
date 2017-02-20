@@ -13,7 +13,7 @@ var computerChoices = [
 
 var computerGuessLetters = [];
 
-// Define variable that will represent computerGuess with blanks:
+// Define variable that will represent computerGuess with blank spaces:
 
 var numberBlanks = 0;
 
@@ -79,11 +79,6 @@ var userGuess = event.key.toLowerCase();
 
 console.log("this is my guess " + userGuess);
 
-// Write userGuess to document. 
-// INCOMPLETE: Below works but does not retain letters on page.
-
-// document.getElementById("user-Guess").innerHTML = userGuess;
-
 // In console log, compare userGuess with each letter in ComputerGuess:
 
 console.log(computerGuess.includes(userGuess));
@@ -91,19 +86,15 @@ console.log(computerGuess.includes(userGuess));
 // Now try comparison as if / then statement:
 
 if (computerGuess.includes(userGuess)) {
+    document.getElementById("user-Guess").innerHTML = 
+    (userGuess + ": Good letter!");
+    }
 
-// Write the userGuess to the correct blank spot in html:
- 
-
-	// alert("Yay!");
-	// document.getElementById("blanks-wins").innerHTML = blanksWins;
-
-// else {
-//     alert("Wah wah ...");
-//     // document.getElementById("blanks-losses").innerHTML = blanksLosses;
-// }
-
+else {
+    document.getElementById("user-Guess").innerHTML = 
+    (userGuess + ": Incorrect letter.");
 }
+
 }
 
 
