@@ -97,9 +97,8 @@ console.log(computerGuess.includes(userGuess));
 // See 1:25:06 in video.
 
 if (computerGuess.includes(userGuess)) {
-    document.getElementById("user-Guess").innerHTML = 
-    (userGuess + ": Good letter!");
-    }
+// write code here
+}
 
 else {
     blanksLosses.push(userGuess);
@@ -108,6 +107,7 @@ else {
 
 if (chances === 0) {
     alert("Eh, too bad! How about another game?");
+    // Need to now reset game; or do this at start game function
 }
 
 
