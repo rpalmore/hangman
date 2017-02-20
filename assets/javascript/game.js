@@ -1,4 +1,4 @@
-// Our array of possible computer choices
+// Our array of possible computer choices for Classic Cocktail theme:
 
 var computerChoices = [
     "dark and stormy",
@@ -9,135 +9,103 @@ var computerChoices = [
     "moscow mule"
 ];
 
-// Define blank array of letters within computerGuess. 
+// Define blank array of letters comprising each computerGuess:
 
 var computerGuessLetters = [];
 
-// Define variable that will represent computerGuess with blank spaces.
-// It starts at zero.
+// Define variable that will represent computerGuess with blanks:
 
 var numberBlanks = 0;
 
-// Define blank array of winning letters
+// Define blank array of winning letters:
 
 var blanksWins = [];
 
-/* Define variables for tracking our wins and losses. 
-    They begin at 0. */
+// Define blank array of losing letters:
+
+var blanksLosses = [];
+
+// Define variables for tracking wins and losses: 
 
 var wins = 0;
 var losses = 0;
 
-/* Sets the computerGuess variable equal to a random 
-choice from the computerChoices array. */
+/* Set the computerGuess variable equal to a random 
+   choice from the computerChoices array. */
 
 var computerGuess = computerChoices[
     Math.floor(Math.random() * computerChoices.length)
 ];
 
+// Check this is working in console.log:
+
 console.log("this is the computerGuess: " + computerGuess)
 
-// Change computerGuess to string of letters
-
-// computerGuessLetters = computerGuess.split("").join("_");
+// Change computerGuess to string of letters:
 
 computerGuessLetters = computerGuess.split("");
 
+// Check this is working in console.log:
+
 console.log("here are computerGuessLetters " + computerGuessLetters);
+
+// Define number of blank spaces needed to represent computerGuess:
 
 numberBlanks = (computerGuess.length);
 
+// Check this is working in console.log:
+
 console.log(numberBlanks);
 
-// Create for loop to convert letters to hyphens
+// Create for loop to convert letters in computerGuess to hyphens:
 
 for (var i = 0; i < numberBlanks; i++) {
     blanksWins.push("_");
 
+// Write the hyphens to the document
+
 document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 }
 
-// function myFunction() {
-//     computerGuessLetters = document.getElementById("numberBlanks").innerHTML; 
-//     var res = computerGuessLetters.replace("_");
-//     document.getElementById("numberBlanks").innerHTML = res;
-// }
-
-
-// Add blank spaces to represent computerGuessLetters
-
-/* When the user presses a key, it will run the following 
-    function. */
+// Capture input from user pressing in key:
 
 document.onkeyup = function(event) {
 
-// Determine which key was pressed and convert to lower case.
+// Determine which key was pressed and convert to lower case:
         
 var userGuess = event.key.toLowerCase();
 
+// Check this is working in console.log:
+
 console.log("this is my guess " + userGuess);
 
-// Compare userGuess with each letter in ComputerGuess.//
+// Write userGuess to document. 
+// INCOMPLETE: Below works but does not retain letters on page.
 
-// console.log(computerGuess[0]);
+// document.getElementById("user-Guess").innerHTML = userGuess;
 
-// function checkLetters (letters) 
-
-// Suggestion from Ethan -- this is working!
+// In console log, compare userGuess with each letter in ComputerGuess:
 
 console.log(computerGuess.includes(userGuess));
 
-
-// Now let's try as if / then statement
+// Now try comparison as if / then statement:
 
 if (computerGuess.includes(userGuess)) {
-	alert("Yay!");
-}
 
-else {
-    alert("Wah wah ...");
-}
+// Write the userGuess to the correct blank spot in html:
+ 
 
-// this bit of code is doing nothg
-    for (var i = 0; i < computerGuessLetters.length; i++);
+	// alert("Yay!");
+	// document.getElementById("blanks-wins").innerHTML = blanksWins;
 
-// but this is working
-//     if ((userGuess) == (computerGuess[0])) {
-// 	alert("Wow!!!");
-// }
-}
-
-
-
-// function allLetter(inputtxt) {
-
-// var letters = /^[A-Za-z]+$/;
-
-//    if(inputtxt.value.match(letters)) {
-
-//    alert("Yay!")
+// else {
+//     alert("Wah wah ...");
+//     // document.getElementById("blanks-losses").innerHTML = blanksLosses;
 // }
 
-//     else {
-//     	alert("Sorry!")
-//     }
-// }
+}
+}
 
-// function allLetter(inputtxt)
-//       { 
-//       var letters = /^[A-Za-z]+$/;
-//       if(inputtxt.value.match(letters))
-//       {
-//       alert('Your name have accepted : you can try another');
-//       return true;
-//       }
-//       else
-//       {
-//       alert('Please input alphabet characters only');
-//       return false;
-//       }
-//       }
 
-	// write function here //
 
 
