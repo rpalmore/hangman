@@ -102,12 +102,19 @@ if (computerGuess.includes(userGuess)) {
     }
 
 else {
-    blanksLosses.push(userGuess)
-    // document.getElementById("user-Guess").innerHTML = 
-    // (userGuess + ": Incorrect letter.");
+    blanksLosses.push(userGuess);
+    chances--;
+}
+
+if (chances === 0) {
+    alert("Eh, too bad! How about another game?");
 }
 
 
+// If computerGuess === blanksWins, user wins.
+// And if chances == 0, user loses. But we have to decrease counter first.
+    document.getElementById("chances-left").innerHTML = chances;
+    document.getElementById("blanks-losses").innerHTML = blanksLosses.join(" ");
 }
 
 /* Add start game function, which should include:
