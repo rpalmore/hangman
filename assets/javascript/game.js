@@ -9,6 +9,10 @@ var computerChoices = [
     "moscow mule"
 ];
 
+// Define empty string to represent computer's random selection:
+
+var computerGuess = "";
+
 // Define blank array of letters comprising each computerGuess:
 
 var computerGuessLetters = [];
@@ -30,10 +34,14 @@ var blanksLosses = [];
 var wins = 0;
 var losses = 0;
 
+// Define variable for number of guesses player has:
+
+var chances = 9;
+
 /* Set the computerGuess variable equal to a random 
    choice from the computerChoices array. */
 
-var computerGuess = computerChoices[
+computerGuess = computerChoices[
     Math.floor(Math.random() * computerChoices.length)
 ];
 
@@ -67,7 +75,9 @@ for (var i = 0; i < numberBlanks; i++) {
 document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 }
 
-// Capture input from user pressing in key:
+document.getElementById("chances-left").innerHTML = chances;
+
+// Next: capture input from user pressing in key:
 
 document.onkeyup = function(event) {
 
@@ -84,6 +94,7 @@ console.log("this is my guess " + userGuess);
 console.log(computerGuess.includes(userGuess));
 
 // Now try comparison as if / then statement:
+// See 1:25:06 in video.
 
 if (computerGuess.includes(userGuess)) {
     document.getElementById("user-Guess").innerHTML = 
@@ -91,12 +102,20 @@ if (computerGuess.includes(userGuess)) {
     }
 
 else {
-    document.getElementById("user-Guess").innerHTML = 
-    (userGuess + ": Incorrect letter.");
+    blanksLosses.push(userGuess)
+    // document.getElementById("user-Guess").innerHTML = 
+    // (userGuess + ": Incorrect letter.");
 }
 
+
 }
 
+/* Add start game function, which should include:
 
+1. chances = 9;
+2. blanksWins = [];
+3. blanksLosses = [];
 
+This may also include the word selection randomizer process.
 
+*/
