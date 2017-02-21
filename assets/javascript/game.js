@@ -59,11 +59,12 @@ console.log("here are computerGuessLetters " + computerGuessLetters);
 
 // Define number of blank spaces needed to represent computerGuess:
 
-numberBlanks = (computerGuess.length);
+numberBlanks = computerGuessLetters.length;
+// numberBlanks = (computerGuess.length);
 
 // Check this is working in console.log:
 
-console.log(numberBlanks);
+console.log("Here is numberBlanks " + numberBlanks);
 
 // Create for loop to convert letters in computerGuess to hyphens:
 
@@ -97,19 +98,27 @@ console.log(computerGuess.includes(userGuess));
 // See 1:25:06 in video.
 
 if (computerGuess.includes(userGuess)) {
-// write code here
-}
+
+    }
+
 
 else {
     blanksLosses.push(userGuess);
     chances--;
 }
 
-if (chances === 0) {
-    alert("Eh, too bad! How about another game?");
-    // Need to now reset game; or do this at start game function
+
+if (computerGuess === blanksWins){
+    wins++;
+    alert("You win!");
+    document.getElementById("win-counter").innerHTML = wins;
 }
 
+if (chances === 0) {
+    alert("Ouch, too bad! How about another game?");
+    document.getElementById("loss-counter").innerHTML = losses;
+    // Need to now reset game; or do this at start game function
+}
 
 // If computerGuess === blanksWins, user wins.
 // And if chances == 0, user loses. But we have to decrease counter first.
