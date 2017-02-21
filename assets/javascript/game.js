@@ -98,7 +98,7 @@ console.log(computerGuess.includes(userGuess));
 // See 1:25:06 in video.
 
 if (computerGuess.includes(userGuess)) {
-
+// Write code here to replace blank spaces with winning letters:
     }
 
 
@@ -106,7 +106,6 @@ else {
     blanksLosses.push(userGuess);
     chances--;
 }
-
 
 if (computerGuess === blanksWins){
     wins++;
@@ -120,8 +119,7 @@ if (chances === 0) {
     // Need to now reset game; or do this at start game function
 }
 
-// If computerGuess === blanksWins, user wins.
-// And if chances == 0, user loses. But we have to decrease counter first.
+// Update remaining chances to HTML, wrong letter guesses.
     document.getElementById("chances-left").innerHTML = chances;
     document.getElementById("blanks-losses").innerHTML = blanksLosses.join(" ");
 }
