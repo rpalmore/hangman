@@ -99,9 +99,8 @@ console.log(computerGuess.includes(userGuess));
 
 if (computerGuess.includes(userGuess)) {
 // Write code here to replace blank spaces with winning letters:
-    }
-
-
+    document.getElementById("blanks-wins").innerHTML = computerGuess.indexOf(userGuess);
+}
 else {
     blanksLosses.push(userGuess);
     chances--;
@@ -114,7 +113,7 @@ if (computerGuess === blanksWins){
 }
 
 if (chances === 0) {
-    alert("Ouch, too bad! How about another game?");
+    alert("Ouch! How about another round?");
     document.getElementById("loss-counter").innerHTML = losses;
     // Need to now reset game; or do this at start game function
 }
