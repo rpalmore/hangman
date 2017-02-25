@@ -40,10 +40,15 @@ var chances = 9;
 
 /* Set the computerGuess variable equal to a random 
    choice from the computerChoices array. */
-
-computerGuess = computerChoices[
+function letComputerChoose() {
+    computerGuess = computerChoices[
     Math.floor(Math.random() * computerChoices.length)
-];
+    ];
+
+    console.log("this is random word generated " + computerGuess);
+}
+
+letComputerChoose();
 
 // Check this is working in console.log:
 
@@ -103,29 +108,24 @@ else {
 
 if (computerGuess === blanksWins){
     wins++;
-    alert("You win!");
     document.getElementById("win-counter").innerHTML = wins;
     chances = 9;
+    blanksLosses = [];
+    blanksWins = [];
+    letComputerChoose();
+
 }
 
 if (chances === 0) {
-    alert("Ouch! How about another round?");
+    losses++;
     document.getElementById("loss-counter").innerHTML = losses;
     chances = 9;
-    // Need to now reset game; or do this at start game function
+    blanksLosses = [];
+    blanksWins = [];
+    letComputerChoose();
 }
 
 // Update remaining chances to HTML, wrong letter guesses.
     document.getElementById("chances-left").innerHTML = chances;
     document.getElementById("blanks-losses").innerHTML = blanksLosses.join(" ");
 }
-
-/* Add start game function, which should include:
-
-1. chances = 9;
-2. blanksWins = [];
-3. blanksLosses = [];
-
-This may also include the word selection randomizer process.
-
-*/
