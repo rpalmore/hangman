@@ -19,8 +19,16 @@ body {
 
 .jumbotron, .footer	{
 	background-color: #87a4ce;
-	border: 2px solid #a55e06;
+	border: 4px solid #a55e06;
 	margin-top: 30px;
+}
+
+#gif {
+	position: absolute;
+	border: 4px solid #bca325;
+	top: 2.5%;
+	left: 2%;
+	width: 15%;
 }
 
 .header {
@@ -28,7 +36,7 @@ body {
 	font-size: 32px;
 	padding-top: 10px;
 	background-color: #a55e06;
-	border: 2px solid #bca325;
+	border: 4px solid #bca325;
 	margin-bottom: 30px;
 }
 
@@ -36,16 +44,22 @@ body {
 	font-family: myFont;
 	font-size: 20px;
 	background-color: #bca325;
-	border: 2px solid #a55e06;
-	height: 190px;
-	padding-top: 3px;
+	border: 4px solid #a55e06;
+	height: 225px;
+	padding-top: 15px;
 	margin-bottom: 35px;
 }
 
-#gif {
-	position: absolute;
-	width: 80%;
-	left: 10%;
+#blanks-wins {
+	margin-top: 50px;
+}
+
+#win-counter {
+	margin-top: 50px;
+}
+
+.left {
+	border-right: 1px solid #a55e06;
 }
 
 img {
