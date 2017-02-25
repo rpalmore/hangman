@@ -63,7 +63,6 @@ console.log("here are computerGuessLetters " + computerGuessLetters);
 numberBlanks = computerGuessLetters.length;
 
 // Create for loop to convert letters in computerGuess to hyphens:
-
 for (var i = 0; i < numberBlanks; i++) {
     blanksWins.push("_");
 
@@ -87,20 +86,18 @@ console.log("this is my guess " + userGuess);
 // In console log, compare userGuess with each letter in computerGuess:
 console.log(computerGuess.includes(userGuess));
 
+
 // Now try comparison as if / then statement:
 if (computerGuess.includes(userGuess)) {
-    // replace blanksWins with userGuess in correct position of computerGuess.
-    // code here
-    postionUserGuess = computerGuess.indexOf(userGuess);
-    blanksWins[postionUserGuess] = userGuess;
+    for (var i = 0; i < computerGuess.length; i++) {
+        if (computerGuess[i] === userGuess) {
+            blanksWins[i] = userGuess;
+        }
+    }
 
-    console.log("here is position of " + postionUserGuess);
     console.log("here is blanksWins " + blanksWins);
     // print correct letter to HTML
     
-    // var repeatLetter = new RegExp("/" + userGuess + "/g");
-
-    // blanksWins.replace(repeatLetter)
     document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 
     console.log("here is position of userGuess " + computerGuess.indexOf(userGuess));
@@ -110,7 +107,7 @@ else {
     chances--;
 }
 
-if (computerGuess === blanksWins){
+if (computerGuess === blanksWins.join("")){
     wins++;
     document.getElementById("win-counter").innerHTML = wins;
     chances = 9;
