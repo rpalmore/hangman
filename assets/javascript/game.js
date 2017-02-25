@@ -5,7 +5,7 @@ var computerChoices = [
     "caipirinha",
     "sazerac",
     "manhattan",
-    "pimm's cup",
+    "pimms cup",
     "moscow mule"
 ];
 
@@ -83,23 +83,18 @@ document.getElementById("chances-left").innerHTML = chances;
 document.onkeyup = function(event) {
 
 // Determine which key was pressed and convert to lower case:
-        
 var userGuess = event.key.toLowerCase();
 
 // Check this is working in console.log:
-
 console.log("this is my guess " + userGuess);
 
 // In console log, compare userGuess with each letter in ComputerGuess:
-
 console.log(computerGuess.includes(userGuess));
 
 // Now try comparison as if / then statement:
-// See 1:25:06 in video.
-
 if (computerGuess.includes(userGuess)) {
-// Write code here to replace blank spaces with winning letters:
-    document.getElementById("blanks-wins").innerHTML = computerGuess.indexOf(userGuess);
+
+    console.log("here is index of " + computerGuess.indexOf(userGuess));
 }
 else {
     blanksLosses.push(userGuess);

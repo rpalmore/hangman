@@ -1,64 +1,47 @@
+@font-face {
+	font-family: myLeadFont;
+	src: url("Dyer Arts and Crafts.ttf");
+}
+
+@font-face {
+	font-family: myFont;
+	src: url("EastMarketNF.ttf");
+}
+
 body {
-		background-image: url("grey.png");
-	}
+	background-image: url("grey.png");
+	font-family: myLeadFont;
+}
 
-.jumbotron, .footer
-	{
-		background-color: #87a4ce;
-		border: 2px solid #a55e06;
-		z-index: 100;
-	}
+.jumbotron {
+	font-size: 55px;
+}
 
-.fa
-	{
-		position: absolute;
-		top: 2%;
-		left: 2%;
-		height: 140px;
-		padding-top: 30px;
-		padding-right: 20px;
-		padding-left: 20px;
-		background-color: #bca325;
-		border: 2px solid #a55e06;
-	}
+.jumbotron, .footer	{
+	background-color: #87a4ce;
+	border: 2px solid #a55e06;
+	margin-top: 30px;
+}
 
-.header
-	{
-		background-color: #a55e06;
-		border: 2px solid #bca325;
-		font-size: 24px;
-		padding-top: 25px;
-		padding-right: 20px;
-		padding-bottom: 20px;
-		padding-left: 20px;
-		margin-bottom: 30px;
-	}
+.header {
+	font-family: myFont;
+	font-size: 32px;
+	padding-top: 10px;
+	background-color: #a55e06;
+	border: 2px solid #bca325;
+	margin-bottom: 30px;
+}
 
-.main-left, .main-right
-	{
-		background-color: #bca325;
-		border: 2px solid #a55e06;
-		font-size: 20px;
-		height: 160px;
-		padding-top: 20px;
-		padding-right: 20px;
-		padding-bottom: 20px;
-		padding-left: 20px;
-		margin-bottom: 35px;
-	}
+.main {
+	font-family: myFont;
+	font-size: 20px;
+	background-color: #bca325;
+	border: 2px solid #a55e06;
+	height: 190px;
+	padding-top: 10px;
+	margin-bottom: 35px;
+}
 
-.main-right
-	{
-		line-height: 50px;
-	}
-
-img
-	{
-		border: 4px solid #a55e06;
-	}
-
-.footer
-	{
-		margin-top: 30px;
-
-	}
+img {
+	border: 4px solid #a55e06;
+}
