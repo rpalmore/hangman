@@ -90,7 +90,18 @@ console.log(computerGuess.includes(userGuess));
 // Now try comparison as if / then statement:
 if (computerGuess.includes(userGuess)) {
     // replace blanksWins with userGuess in correct position of computerGuess.
-    document.getElementById("blanks-wins").innerHTML = userGuess.replace("_") + blanksWins.join(" ");
+    // code here
+    postionUserGuess = computerGuess.indexOf(userGuess);
+    blanksWins[postionUserGuess] = userGuess;
+
+    console.log("here is position of " + postionUserGuess);
+    console.log("here is blanksWins " + blanksWins);
+    // print correct letter to HTML
+    
+    // var repeatLetter = new RegExp("/" + userGuess + "/g");
+
+    // blanksWins.replace(repeatLetter)
+    document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 
     console.log("here is position of userGuess " + computerGuess.indexOf(userGuess));
 }
@@ -106,7 +117,6 @@ if (computerGuess === blanksWins){
     blanksLosses = [];
     blanksWins = [];
     letComputerChoose();
-
 }
 
 if (chances === 0) {
