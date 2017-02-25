@@ -67,11 +67,9 @@ for (var i = 0; i < numberBlanks; i++) {
     blanksWins.push("_");
 
 // Write the hyphens to the document
-
 document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
 }
-
-document.getElementById("chances-left").innerHTML = chances;
+// document.getElementById("chances-left").innerHTML = chances;
 
 // Next: capture input from user pressing in key:
 
@@ -86,22 +84,15 @@ console.log("this is my guess " + userGuess);
 // In console log, compare userGuess with each letter in computerGuess:
 console.log(computerGuess.includes(userGuess));
 
-
 // Now try comparison as if / then statement:
 if (computerGuess.includes(userGuess)) {
     for (var i = 0; i < computerGuess.length; i++) {
         if (computerGuess[i] === userGuess) {
             blanksWins[i] = userGuess;
-        }
-    }
-
-    console.log("here is blanksWins " + blanksWins);
-    // print correct letter to HTML
-    
-    document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
-
-    console.log("here is position of userGuess " + computerGuess.indexOf(userGuess));
 }
+    document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
+    console.log("here is position of userGuess " + computerGuess.indexOf(userGuess));
+}}
 else {
     blanksLosses.push(userGuess);
     chances--;
@@ -128,4 +119,6 @@ if (chances === 0) {
 // Update HTML
     document.getElementById("chances-left").innerHTML = chances;
     document.getElementById("blanks-losses").innerHTML = blanksLosses.join(" ");
+    document.getElementById("blanks-wins").innerHTML = blanksWins.join(" ");
+
 }
