@@ -45,14 +45,10 @@ function letComputerChoose() {
     Math.floor(Math.random() * computerChoices.length)
     ];
 
-    console.log("this is random word generated " + computerGuess);
+    console.log("this is the computerGuess: " + computerGuess)
 }
 
 letComputerChoose();
-
-// Check this is working in console.log:
-
-console.log("this is the computerGuess: " + computerGuess)
 
 // Change computerGuess to string of letters:
 
@@ -65,11 +61,6 @@ console.log("here are computerGuessLetters " + computerGuessLetters);
 // Define number of blank spaces needed to represent computerGuess:
 
 numberBlanks = computerGuessLetters.length;
-// numberBlanks = (computerGuess.length);
-
-// Check this is working in console.log:
-
-console.log("Here is numberBlanks " + numberBlanks);
 
 // Create for loop to convert letters in computerGuess to hyphens:
 
@@ -93,13 +84,15 @@ var userGuess = event.key.toLowerCase();
 // Check this is working in console.log:
 console.log("this is my guess " + userGuess);
 
-// In console log, compare userGuess with each letter in ComputerGuess:
+// In console log, compare userGuess with each letter in computerGuess:
 console.log(computerGuess.includes(userGuess));
 
 // Now try comparison as if / then statement:
 if (computerGuess.includes(userGuess)) {
+    // replace blanksWins with userGuess in correct position of computerGuess.
+    document.getElementById("blanks-wins").innerHTML = userGuess.replace("_") + blanksWins.join(" ");
 
-    console.log("here is index of " + computerGuess.indexOf(userGuess));
+    console.log("here is position of userGuess " + computerGuess.indexOf(userGuess));
 }
 else {
     blanksLosses.push(userGuess);
@@ -125,7 +118,7 @@ if (chances === 0) {
     letComputerChoose();
 }
 
-// Update remaining chances to HTML, wrong letter guesses.
+// Update HTML
     document.getElementById("chances-left").innerHTML = chances;
     document.getElementById("blanks-losses").innerHTML = blanksLosses.join(" ");
 }
