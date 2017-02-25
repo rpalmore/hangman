@@ -105,11 +105,13 @@ if (computerGuess === blanksWins){
     wins++;
     alert("You win!");
     document.getElementById("win-counter").innerHTML = wins;
+    chances = 9;
 }
 
 if (chances === 0) {
     alert("Ouch! How about another round?");
     document.getElementById("loss-counter").innerHTML = losses;
+    chances = 9;
     // Need to now reset game; or do this at start game function
 }
 

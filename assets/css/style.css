@@ -38,8 +38,14 @@ body {
 	background-color: #bca325;
 	border: 2px solid #a55e06;
 	height: 190px;
-	padding-top: 10px;
+	padding-top: 3px;
 	margin-bottom: 35px;
+}
+
+#gif {
+	position: absolute;
+	width: 80%;
+	left: 10%;
 }
 
 img {
