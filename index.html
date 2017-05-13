@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Hangman!</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Hangman!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 
 <body>
-	<div class="container-fluid text-center">
-	
-		<header class="jumbotron"><img id="gif" src="assets/css/giphy.gif" alt="cocktail hour"><i class="fa fa-glass fa-1x aria-hidden="true"></i>Welcome to Hangman's</header>
-
-		<div class="header col-lg-6 col-lg-offset-3">
-			
-			<p>Press any key to order a drink</p>
-
+    <div class="container-fluid text-center">
+        <header class="jumbotron">
+            <div class="welcome">
+                <img id="gif" src="assets/css/giphy.gif" alt="cocktail hour">
+                <span>
+					Welcome to Hangman's
+				</span>
+            </div>
+        </header>
+        <div class="header col-lg-6 col-lg-offset-3">
+            <p>Press any key to order a drink
+                <i class="fa fa-glass fa-1x aria-hidden=" true"></i>
+            </p>
 		</div>
 
 		<div class="row">
@@ -25,25 +31,29 @@
 
 				<div class="left col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
-					<p>Remaining guesses: <span id="chances-left"></span></p>
-
-					<p id="blanks-wins"></p>
+					<div>
+						<p>Remaining guesses: <span id="chances-left"></span></p>
+					</div>
+					<div class="blanks">
+						<p id="blanks-wins"></p>
+					</div>
 
 				</div>
 
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-
-				<p>Wrong guesses: <span id="blanks-losses"></span></p>
-
+				<div>
+					<p>Wrong guesses: <span id="blanks-losses"></span></p>
+				</div>
+				<div class="scores ">
 					<p>WINS: <span id="win-counter"</span></p>
 			
 					<p>LOSSES: <span id="loss-counter"></span></p>
-
 				</div>
 
+				</div>
 			</div>
 
-		<img id="drinks" src="assets/css/cocktail.jpg" alt="cocktail hour" width="50%">
+		<img id="drinks " src="assets/css/cocktail.jpg" alt="cocktail hour" width="50% ">
 
 
 		<div class="container-fluid">
